@@ -1,0 +1,38 @@
+import numpy as np
+import matplotlib.pyplot as plt
+n1=1.5
+delta=0.01
+a=30
+n2=n1*np.sqrt(1-2*delta)
+r=np.linspace(0,50)
+n_step=np.where(r<=a,n1,n2)
+plt.figure()
+plt.plot(r,n_step,'b')
+plt.axvline(a)
+plt.legend()
+plt.grid()
+plt.show()
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+n1=1.5
+delta=0.01
+a=30
+n2=n1*np.sqrt(1-2*delta)
+r_range=np.linspace(0,a,500)
+m=(r_range/a)
+n_triangular=n1*(1-2*delta*m)**0.5
+n_parabolic=n1*(1-2*delta*m**2)**0.5
+n_step=np.where(r<=a,n1,n2)
+plt.figure()
+plt.plot(r,n_step,'b')
+plt.axvline(a)
+plt.legend()
+plt.grid()
+plt.show()
+
+x=refractive Index
+y=radial distamce 
+1.step index fiber profile
+2.refractive index fiber profile
